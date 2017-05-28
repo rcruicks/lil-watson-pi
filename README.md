@@ -33,6 +33,9 @@ create an entry for local WiFi network
 `sudo wpa_passphrase CodeNode welovecode | sudo tee -a /etc/wpa_supplication/wpa_supplicat.conf`
 
 `sudo raspi-config` 
+
+![}(/images/raspi-config-menu.png)
+
 - Interfaces - enable ssh
 - Hostname - pick your name -- *this will override the name raspberrypi*
 - Password - set new password for `pi`
