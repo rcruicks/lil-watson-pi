@@ -14,9 +14,10 @@ touch *ssh* file in boot folder
 1 Windows `echo > x:\ssh`
 
 ```
-for PiZw, there is no onboard ethernet, so exploit recent support for ethernet gadget 
+for PiZw, there is no onboard ethernet, so exploit recent support for ethernet gadget
+```
 [Pi ethernet over USB](http://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/)
-
+```
 - update config.txt
 - update cmdline.txt
 ```
