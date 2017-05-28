@@ -1,33 +1,45 @@
 # lil-watson-pi
 linuxing in london - raspberry pi edge connector to Watson with Node-RED
 
-minimal node-red install for headless PiZ
+minimal node-red install for headless PiZw/Pi3
 
-raspbian jessie lite
-etcher flash utility
+download raspbian [jessie full image](https://downloads.raspberrypi.org/raspbian_latest)
 
+currently - this will be `2017-04-10-raspbian-jessie.img`
+
+follow SD image creation [process](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) using the etcher flash utility from [etcher.io](https://etcher.io/)
+
+touch *ssh* file in boot folder 
+1 macos `touch /Volumes/boot`
+1 Windows `echo > x:\ssh`
+
+```
+for PiZw, there is no onboard ethernet, so exploit recent support for ethernet gadget 
 [Pi ethernet over USB](http://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/)
 
-1 update config.txt
-1 update cmdline.txt
+- update config.txt
+- update cmdline.txt
+```
 
-touch *ssh* file in boot folder
++ plug in PiZw - via USB port **NOT** power port
++ plug in Pi3 - via ethernet
 
-enable ICS on host
-
-plug in Pi - via USB port NOT power port
-
-terminal - resolve raspberrypi.local (ping)
+terminal - resolve raspberrypi.local (ping) - should resolve to a 169.254.x.x [APIPA](http://www.webopedia.com/TERM/A/APIPA.html) address
 
 terminal remote - `ssh pi@raspberrypi.local`
 
-raspi-config 
+create an entry for local WiFi network
+`sudo wpa_passphrase CodeNode welovecode | sudo tee -a /etc/wpa_supplication/wpa_supplicat.conf`
+
+`sudo raspi-config` 
 - Interfaces - enable ssh
-- expand file system
+- Hostname - pick your name -- *this will override the name raspberrypi*
+- Password - set new password for `pi`
+Select *Finish*
 
-`reboot`
+`sudo reboot`
 
-reconnect with ssh 
+reconnect with ssh (using new hostname - should resolve to wifi connection)
 
 install python, and pip
 
