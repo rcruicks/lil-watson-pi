@@ -43,7 +43,15 @@ Select *Finish*
 
 `sudo reboot`
 
-reconnect with ssh (using new hostname - should resolve to wifi connection)
+reconnect with ssh (using new *hostname* - should resolve to wifi connection)
+
+**work in progress**
+
+`sudo systemctl enable nodered.service`
+
+`sudo systemctl start nodered.service`
+
+check via *hostname:1880*
 
 install python, and pip
 
