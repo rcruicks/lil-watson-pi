@@ -30,7 +30,7 @@ terminal - resolve raspberrypi.local (ping) - should resolve to a 169.254.x.x [A
 terminal remote - `ssh pi@raspberrypi.local`
 
 create an entry for local WiFi network
-`sudo wpa_passphrase CodeNode welovecode | sudo tee -a /etc/wpa_supplication/wpa_supplicat.conf`
+`sudo wpa_passphrase CodeNode welovecode | sudo tee -a /etc/wpa_supplication/wpa_supplicant.conf`
 
 `sudo raspi-config` 
 
