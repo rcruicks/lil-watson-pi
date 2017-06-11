@@ -9,7 +9,8 @@ currently - this will be `2017-04-10-raspbian-jessie.img`
 
 follow SD image creation [process](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) using the etcher flash utility from [etcher.io](https://etcher.io/)
 
-touch *ssh* file in boot folder 
+touch *ssh* file in boot folder
+
 1 macos `touch /Volumes/boot`
 1 Windows `echo > x:\ssh`
 
