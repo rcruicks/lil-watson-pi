@@ -39,6 +39,7 @@ create an entry for local WiFi network
 - Interfaces - enable ssh
 - Hostname - pick your name -- *this will override the name raspberrypi*
 - Password - set new password for `pi`
+- Advanced - Audio - set to 3.5mm
 Select *Finish*
 
 `sudo reboot`
