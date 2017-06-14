@@ -70,6 +70,7 @@ sudo pip-3.2 install pillow
 
 on *macos* this results in the Pi showing up as a device in the Finder view; something similar on linux?
 
+bonjour printing service for windows
 
 
 
