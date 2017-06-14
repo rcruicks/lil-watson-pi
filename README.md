@@ -64,6 +64,12 @@ install [base requirement for python](https://www.raspberrypi.org/documentation/
 sudo apt-get install sense-hat
 sudo pip-3.2 install pillow
 
+** extras worth trying **
+
+`sudo apt-get install netatalk`
+
+on *macos* this results in the Pi showing up as a device in the Finder view; something similar on linux?
+
 
 
 
