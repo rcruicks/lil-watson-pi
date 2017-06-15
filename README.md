@@ -28,6 +28,10 @@ for PiZw, there is no onboard ethernet, so exploit recent support for ethernet g
 
 terminal - resolve raspberrypi.local (ping) - should resolve to a 169.254.x.x [APIPA](http://www.webopedia.com/TERM/A/APIPA.html) address
 
+if this does not work automatically, you may benefit from installing *avahi-autoipd*
+`sudo apt-get install avahi-autoipd`
+this will enable allow the ethernet port to try Automatic address discovery/assignment (dhcp), and if this fails (as would normally happen with a point-to-point ethernet connection, address assignment will fallback to APIPA/llink-local.
+
 terminal remote - `ssh pi@raspberrypi.local`
 
 create an entry for local WiFi network
