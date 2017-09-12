@@ -1,0 +1,16 @@
+[Unit]
+Description=The NodeRed
+After=syslog.target network.target
+
+[Service]
+Type=simple
+Nice=5
+KillSignal=SIGINT
+ExecStart=/usr/bin/node-red
+ Restart=on-failure
+ StandardOutput=syslog
+WorkingDirectory=/home/pi/.node-red
+User=pi
+Group=pi
+[Install]
+WantedBy=multi-user.target
