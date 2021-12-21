@@ -11,8 +11,8 @@ follow SD image creation [process](https://www.raspberrypi.org/documentation/ins
 
 touch *ssh* file in boot folder
 
-+ macos `touch /Volumes/boot`
-+ Windows `echo > x:\ssh`
++ macos `touch /Volumes/boot/ssh`
++ Windows `echo > x:\ssh`  (where X is the drive that the boot volume has been mounted to)
 
 ```
 for PiZw, there is no onboard ethernet, so exploit recent support for ethernet gadget
